@@ -1,0 +1,28 @@
+/* Paleta de PokéAprende */
+:root {
+  --rojo: #E3350D;
+  --amarillo: #FFCB05;
+  --azul: #2A3F6F;
+}
+
+/* ========== NAVBAR ========== */
+#menu {
+  background-color: var(--azul);
+}
+
+/* ========== SECCIONES ========== */
+.seccion {
+  min-height: 60vh;
+  padding: 3rem 0;
+  scroll-margin-top: 56px; /* evita que la navbar fija tape el título */
+}
+
+#inicio {
+  padding-top: 6rem; /* espacio bajo la navbar fija */
+}
+
+/* ========== PIE DE PÁGINA ========== */
+.pie {
+  background-color: var(--azul);
+  color: #fff;
+}
