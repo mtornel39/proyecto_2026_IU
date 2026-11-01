@@ -43,6 +43,6 @@ Abre `index.html` en el navegador. Necesitas conexión a internet, porque Bootst
 
 | Integrante | Rol |
 |---|---|
-| Sergio Martin | Líder / Coordinadora |
+| Sergio Martin | Líder / Coordinador |
 | Ámbar Fernández | Programadora Diseño UI/UX |
 | Manuel Tornel | Frontend - Testing |
