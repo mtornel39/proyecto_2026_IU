@@ -76,7 +76,35 @@
     <section id="contacto" class="seccion bg-light">
       <div class="container">
         <h2>Contacto</h2>
-        <p>Contenido de la sección Contacto.</p>
+        <p>Para contactarnos, ingrese sus datos y el mensaje que quiera enviar.</p>
+        <form>
+          <div class="row m-1">
+            <div class="col-4 col-md-2"><label>Nombre:</label></div>
+            <div class="col-4 col-md-2"><input type="text" name="nombre" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+" required></div>
+          </div>
+          <div class="row m-1">
+            <div class="col-4 col-md-2"><label>Correo electrónico:</label></div>
+            <div class="col-4 col-md-2"><input type="email" name="correo" required></div>
+          </div>
+          <div class="row m-1 my-3">
+            <div class="col-4 col-md-2"><label>¿Qué usuario eres?:</label></div>
+            <div class="col-8">
+              <div class="row">
+                <div class="col-12 col-md-3 col-xl-2"><input type="radio" name="usuario" value="Estudiante" id="Estudiante" required><label for="Estudiante">Estudiante</label></div>
+                <div class="col-12 col-md-3 col-xl-2"><input type="radio" name="usuario" value="Docente" id="Docente" required><label for="Docente">Docente</label></div>
+                <div class="col-12 col-md-4 col-xl-2"><input type="radio" name="usuario" value="Apoderado" id="Apoderado" required><label for="Apoderado">Apoderado</label></div> <!--col-md-4 en ves de 3 para que tenga espacio en lo más chico de md-->
+              </div> 
+            </div>
+          </div>
+          <div class="row m-1 my-3">
+            <div class="col-4 col-md-2"><label>Mensaje:</label></div>
+            <div class="col-4 col-md-2"><input type="text" name="mensaje" size="70" required></div>
+          </div>
+          <div class="row m-1">
+            <div class="col-3 col-md-2"></div>
+            <div class="col-3 col-md-2"><input type="submit" name="enviar"></div>
+          </div>
+        </form>
       </div>
     </section>
   </main>
