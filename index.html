@@ -59,9 +59,16 @@
       <div class="container">
         <h2>Jugar Ahora</h2>
         <p>Contenido de la sección Jugar Ahora.</p>
-        ingresalo
-        <input type="text" name="poke" placeholder="ingresa tu pokemon">
-        <input type="button" name="boton1" value="buscar">
+        <div class="row">
+          <div class="col-12 col-md-8 col-lg-5">
+            <div class="input-group mb-3 shadow-sm">
+              <label class="input-group-text fw-semibold" for="poke">Juega:</label>
+              <input type="text" class="form-control rounded-end" id="poke" name="poke" placeholder="Ingresa tipo">
+              <button type="button" class="btn btn-primary px-4 ms-2 rounded" id="boton1" name="boton1">Buscar</button>           
+            </div>
+          </div>
+        </div>
+        <div id="resultado" class="row g-3"></div>
       </div>
     </section>
 
