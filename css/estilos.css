@@ -26,3 +26,66 @@
   background-color: var(--azul);
   color: #fff;
 }
+
+
+/* Formulario de contacto */
+
+#formulario-contacto {
+  background-color: white;
+  max-width: 600px;
+  margin: 25px auto;
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+#formulario-contacto .form-label {
+  color: #2A3F6F;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+#formulario-contacto .form-check-label {
+  color: #2A3F6F;
+  margin: 0;
+}
+
+#formulario-contacto input[type="text"],
+#formulario-contacto input[type="email"],
+#formulario-contacto textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#formulario-contacto .form-check {
+  margin-bottom: 5px;
+}
+
+#formulario-contacto button[type="submit"] {
+  background-color: #E3350D;
+  border-color: #E3350D;
+}
+
+#formulario-contacto button[type="submit"]:hover {
+  background-color: #bd2b0b;
+  border-color: #bd2b0b;
+}
+
+/* Opciones de tipo de usuario */
+#formulario-contacto legend.form-label {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+#formulario-contacto .form-check-input:checked {
+  background-color: var(--rojo);
+  border-color: var(--rojo);
+}
+
+#formulario-contacto .form-check-input:focus {
+  border-color: var(--rojo);
+  box-shadow: 0 0 0 0.25rem rgba(227, 53, 13, 0.25);
+}
