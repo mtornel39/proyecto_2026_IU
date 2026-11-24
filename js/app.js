@@ -32,7 +32,7 @@ botonBuscar.addEventListener("click", async () => {
     if (!respuesta.ok) throw new Error("Tipo no encontrado");
     const datos = await respuesta.json();
 
-    // 4.- Mostrar en pantalla los primeros 12 pokémon
+    // 4.- Mostrar en pantalla los primeros 20 pokémon
     resultado.innerHTML = "";
     datos.pokemon.slice(0, 20).forEach((item) => {
       const nombre = item.pokemon.name;
@@ -52,3 +52,35 @@ botonBuscar.addEventListener("click", async () => {
     resultado.innerHTML = `<p class="text-danger">${error.message}</p>`;
   }
 });
+
+// ===== SECCIÓN CONTACTO =====
+function validarForm()
+{
+  const inputNombre = document.getElementById("nombre").value;
+  const inputCorreo = document.getElementById("correo").value;
+  const inputMensaje = document.getElementById("mensaje").value;
+  const inputUsuario = document.getElementsByName("usuario");
+
+  console.log("----------------------");
+  console.log("Nombre: " + inputNombre);
+  console.log("Correo: " + inputCorreo);
+  console.log("Usuario: estudiante=", inputUsuario[0].checked, "docente=", inputUsuario[1].checked, "apoderado=", inputUsuario[2].checked);
+  console.log("Mensaje: " + inputMensaje);
+
+  if(inputNombre.trim()==="" || inputCorreo.trim()==="" || inputMensaje.trim()==="")
+  {
+    alert("Debe completar todos los campos de texto del formulario");
+    console.log("Campo de texto vacio");
+    return false;
+  }
+  else if(inputUsuario[0].checked==false && inputUsuario[1].checked==false && inputUsuario[2].checked==false)
+  {
+    alert("Debe seleccionar una alternativa de usuario");
+    console.log("Alternativas vacias");
+    return false;
+  }
+  else
+  {
+    alert("Formulario enviado exitosamente");
+  }
+}
