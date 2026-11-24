@@ -50,17 +50,30 @@
     <section id="jugar" class="seccion">
       <div class="container">
         <h2>Jugar Ahora</h2>
-        <p>Contenido de la sección Jugar Ahora.</p>
-        <div class="row">
-          <div class="col-12 col-md-8 col-lg-5">
-            <div class="input-group mb-3 shadow-sm">
-              <label class="input-group-text fw-semibold" for="poke">Juega:</label>
-              <input type="text" class="form-control rounded-end" id="poke" name="poke" placeholder="Ingresa tipo">
-              <button type="button" class="btn btn-primary px-4 ms-2 rounded" id="boton1" name="boton1">Buscar</button>
+        <p>Escribe un tipo de Pokémon (en español o en inglés) o elige uno de la lista, y descubre qué Pokémon pertenecen a ese tipo.</p>
+
+        <!-- Usamos un form para que la tecla Enter también busque -->
+        <form id="form-jugar" class="row" novalidate>
+          <div class="col-12 col-md-8 col-lg-6">
+            <div class="input-group shadow-sm">
+              <label class="input-group-text fw-semibold" for="poke">Tipo:</label>
+              <input type="text" class="form-control" id="poke" name="poke"
+                     placeholder="Ej: fuego, agua, planta" list="lista-tipos" autocomplete="off">
+              <button type="submit" class="btn btn-primary px-4" id="boton1" name="boton1">Buscar</button>
             </div>
+            <div id="mensaje-jugar" class="form-text text-danger mb-2" aria-live="polite"></div>
           </div>
-        </div>
+        </form>
+        <datalist id="lista-tipos"></datalist>
+
+        <!-- Botones de tipos (se crean desde app.js) -->
+        <div id="tipos" class="d-flex flex-wrap gap-2 mb-4"></div>
+
+        <p id="info-resultado" class="fw-semibold" aria-live="polite"></p>
         <div id="resultado" class="row g-3"></div>
+        <div class="text-center mt-4">
+          <button type="button" id="ver-mas" class="btn btn-outline-primary d-none">Ver más</button>
+        </div>
       </div>
     </section>
 
