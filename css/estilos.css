@@ -133,3 +133,42 @@
   margin: 0.75rem auto 0;
   image-rendering: pixelated; /* los sprites se ven nítidos al agrandarse */
 }
+
+/* Las cards se pueden clickear */
+.card-poke {
+  cursor: pointer;
+}
+
+.card-poke:focus-visible {
+  outline: 3px solid var(--amarillo);
+  outline-offset: 2px;
+}
+
+/* ========== MODAL DEL POKÉMON ========== */
+#modal-poke .modal-header {
+  background-color: var(--rojo);
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+}
+
+#modal-poke .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%); /* X blanca */
+}
+
+.modal-poke-img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.stat-nombre {
+  width: 110px;
+  font-size: 0.9rem;
+}
+
+.stat-valor {
+  width: 40px;
+  font-weight: 600;
+  text-align: right;
+  margin-right: 0.75rem;
+}

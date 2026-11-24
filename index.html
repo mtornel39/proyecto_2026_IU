@@ -36,7 +36,7 @@
     <section id="inicio" class="seccion">
       <div class="container">
         <h1>Inicio</h1>
-        <p>Bienvenido(a) a PokéAprende, una página creada por y para fans de Pokémon. Aquí podrás ver y buscar libremente entre todos los Tipos de Pokémon en el universo del juego, solo tienes que escribir el Tipo que deseas ver y clickear el botón buscar, y así de fácil, podrás ver todos los tipos de Pokémon del tipo que buscas! Empieza ya desde la sección "Jugar ahora"!</p>
+        <p>Bienvenido(a) a PokéAprende, una página creada por y para fans de Pokémon. Aquí podrás ver y buscar libremente entre todos los Tipos de Pokémon en el universo del juego, solo tienes que elegir el Tipo que deseas ver, y así de fácil, podrás ver todos los tipos de Pokémon del tipo que buscas! Empieza ya desde la sección "Jugar ahora"!</p>
       </div>
     </section>
 
@@ -50,21 +50,7 @@
     <section id="jugar" class="seccion">
       <div class="container">
         <h2>Jugar Ahora</h2>
-        <p>Escribe un tipo de Pokémon (en español o en inglés) o elige uno de la lista, y descubre qué Pokémon pertenecen a ese tipo.</p>
-
-        <!-- Usamos un form para que la tecla Enter también busque -->
-        <form id="form-jugar" class="row" novalidate>
-          <div class="col-12 col-md-8 col-lg-6">
-            <div class="input-group shadow-sm">
-              <label class="input-group-text fw-semibold" for="poke">Tipo:</label>
-              <input type="text" class="form-control" id="poke" name="poke"
-                     placeholder="Ej: fuego, agua, planta" list="lista-tipos" autocomplete="off">
-              <button type="submit" class="btn btn-primary px-4" id="boton1" name="boton1">Buscar</button>
-            </div>
-            <div id="mensaje-jugar" class="form-text text-danger mb-2" aria-live="polite"></div>
-          </div>
-        </form>
-        <datalist id="lista-tipos"></datalist>
+        <p>Elige un tipo para descubrir qué Pokémon pertenecen a él. Haz clic en cualquier Pokémon para ver sus características.</p>
 
         <!-- Botones de tipos (se crean desde app.js) -->
         <div id="tipos" class="d-flex flex-wrap gap-2 mb-4"></div>
@@ -122,6 +108,19 @@
       </div>
     </section>
   </main>
+
+  <!-- Modal con las características del Pokémon (se llena desde app.js) -->
+  <div class="modal fade" id="modal-poke" tabindex="-1" aria-labelledby="modal-poke-titulo" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header" id="modal-poke-header">
+          <h5 class="modal-title text-capitalize" id="modal-poke-titulo">Pokémon</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body" id="modal-poke-cuerpo"></div>
+      </div>
+    </div>
+  </div>
 
   <footer class="pie text-center py-3">
     <div class="container">
